@@ -1,5 +1,4 @@
-# Mala distribución y circulación de busetas (alimentadores de servicio público) durante la hora pico nocturna en
-el municipio de Soacha, Cundinamarca. Colombia.
+# Mala distribución y circulación de busetas (alimentadores de servicio público) durante la hora pico nocturna en el municipio de Soacha, Cundinamarca. Colombia.
 
 ## (DESCRIPCIÓN DEL PROYECTO)
 
