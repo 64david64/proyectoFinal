@@ -2,10 +2,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problemática Ciudad Verde</title>
+    <title>Problemática CV</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <p> Hola Mundo! </p> 
-    
+    <header>
+        <div></div>
+        <div>
+            <h1>
+                Análisis de problemática de transporte en el municipio de Soacha
+            </h1>
+        </div>
+    </header>
+    <main>
+        <div>
+            <p>
+                Este proyecto tiene como objetivo realizar un análisis sobre la situación de transporte en el barrio
+                <a href="https://es.wikipedia.org/wiki/Ciudad_Verde">Ciudad Verde.</a> 
+                Especialmente durante la jornada de hora pico nocturna y la distribución y circulación de las busetas "alimentadoras" de transporte público.
+            </p>
+        </div>
+        <div id="map"></div>
+    </main>
+    <footer>
+        <div></div>
+    </footer>
+    <script src="programa.js"></script>
 </body>
 </html>
