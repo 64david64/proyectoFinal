@@ -1,0 +1,26 @@
+.layout-container {
+            display: flex; /* Activamos Flexbox */
+            flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+            gap: 2em; /* Espacio entre las columnas */
+            margin-top: 1em; /* Un poco de espacio después del título de la página */
+        }
+
+        /* Estilo para cada columna */
+        .column {
+            flex: 1; /* Permite que las columnas crezcan y se encojan de forma equitativa */
+            min-width: 300px; /* Ancho mínimo para evitar que se compriman demasiado */
+            /* background-color: #f9f9f9;  Un color de fondo suave para distinguir las columnas (opcional) */
+            /* padding: 1em; (opcional) */
+        }
+
+        /* Estilo específico para el contenedor del mapa en esta página */
+        .map-placeholder { /* Si es un mapa de Leaflet, usa el ID que le des */
+            width: 100%;
+            height: 400px; /* Ajusta la altura según necesites */
+            background-color: #e0e0e0; /* Color de fondo mientras no hay mapa */
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }

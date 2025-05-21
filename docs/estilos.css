@@ -1,11 +1,13 @@
+/* Fondo general de la página */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: white; /* blanco */
     color: #333;
 }
 
+/* Estilo del encabezado */
 header {
     background-color: #4CAF50;
     color: white;
@@ -13,14 +15,55 @@ header {
     text-align: center;
 }
 
+/* Estilo de la barra de navegación */
+.navbar {
+    background-color: #4CAF50;
+    padding: 1em;
+    margin-top: 1em;
+    border-radius: 8px;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Lista de enlaces en la barra */
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Espaciado entre los ítems */
+.nav-links li {
+    margin: 0 1em;
+}
+
+/* Estilo de los enlaces */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Contenido principal */
 main {
+    background-color: white; /* fuerza el fondo blanco para el contenido */
     padding: 2em;
 }
 
+/* Secciones */
 section {
     margin-bottom: 2em;
 }
 
+/* Pie de página */
 footer {
     background-color: #222;
     color: white;
