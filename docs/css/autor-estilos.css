@@ -1,0 +1,155 @@
+/* docs/css/autor-estilos.css */
+
+/* Contenido Principal de "Autor" */
+main {
+    padding: 2em;
+    max-width: 1100px; /* Ancho máximo general para el contenido */
+    margin: 0 auto;    /* Centra el contenido */
+}
+
+/* Sección del Título Principal de la Página "Autor" */
+#titulo-autor {
+    text-align: center;
+    margin-bottom: 2.5em; /* Un poco más de espacio antes del contenido de dos columnas */
+    padding: 1em;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+#titulo-autor h2 {
+    color: #4CAF50; /* Color del título acorde a la paleta */
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Contenedor del Layout de dos columnas (Foto y Texto) */
+.layout-container-autor {
+    display: flex;
+    flex-wrap: wrap; /* Para que se apilen en pantallas pequeñas */
+    gap: 2.5em; /* Espacio entre la columna de foto y texto */
+    margin-bottom: 2.5em; /* Espacio antes de la sección del mapa */
+    align-items: flex-start; /* Alinea los items al inicio si tienen alturas diferentes */
+}
+
+.columna {
+    padding: 1.5em;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+}
+
+.columna-foto {
+    flex: 1; /* Ocupa una fracción del espacio */
+    min-width: 280px; /* Ancho mínimo antes de apilarse */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em; /* Menos padding si es solo para la foto */
+}
+
+.foto-placeholder {
+    width: 220px; /* Ancho del placeholder de la foto */
+    height: 220px; /* Alto del placeholder de la foto */
+    background-color: #e0e0e0;
+    border: 2px dashed #ccc;
+    border-radius: 50%; /* Para hacerlo circular, ¡puedes cambiarlo! */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+    color: #777;
+}
+
+.columna-foto img { /* Estilo si usas una etiqueta <img> real */
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%; /* Para que la imagen también sea circular */
+    border: 3px solid white;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.columna-texto {
+    flex: 2; /* Ocupa dos fracciones del espacio, más ancho que la foto */
+    min-width: 300px; /* Ancho mínimo */
+}
+
+.columna-texto h3 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.columna-texto p {
+    text-align: justify;
+    line-height: 1.7;
+    margin-bottom: 1em;
+}
+
+.columna-texto strong {
+    color: #42855A; /* Un verde un poco más oscuro para destacar */
+}
+
+/* Sección del Mapa de la Universidad */
+#ubicacion-universidad {
+    padding: 2em;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    text-align: center; /* Centra el título del mapa */
+}
+
+#ubicacion-universidad h3 {
+    color: #4CAF50;
+    margin-top: 0;
+    margin-bottom: 0.3em; /* Menos espacio antes del subtitulo */
+    font-size: 1.6em;
+}
+
+.subtitulo-mapa { /* Estilo para el texto "Facultad de Ingeniería..." */
+    font-size: 1em;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+}
+
+.mapa-container, #mapaUniversidad { /* Asegura que el contenedor del mapa tenga altura */
+    height: 450px; /* Altura del mapa */
+    width: 100%;
+    max-width: 800px; /* Ancho máximo para el mapa, se centrará */
+    margin: 0 auto; /* Centra el mapa si es más angosto que la sección */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 768px) {
+    .layout-container-autor {
+        gap: 1.5em; /* Menos espacio en móviles */
+    }
+
+    .columna-foto, .columna-texto {
+        min-width: 100%; /* Hace que ocupen todo el ancho y se apilen */
+        margin-bottom: 1.5em;
+    }
+
+    .columna-foto {
+        order: -1; /* Opcional: Pone la foto primero cuando se apilan */
+    }
+
+    .foto-placeholder {
+        width: 180px;
+        height: 180px;
+    }
+
+    #ubicacion-universidad {
+        padding: 1.5em;
+    }
+
+    #mapaUniversidad {
+        height: 350px; /* Menos altura para el mapa en móviles */
+    }
+}

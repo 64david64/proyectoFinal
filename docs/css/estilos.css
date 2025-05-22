@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    max-width: 1100px; 
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1em; 
+    padding-right: 1em;  
+    font-size: 1.8em;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.navbar {
+    background-color: #4CAF50;
+    padding: 1em;
+    margin: 1em auto;
+    border-radius: 8px;
+    width: 95%;
+    max-width: 1100px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1em;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0.5em 0;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a:focus {
+    text-decoration: underline;
+    color: #e0e0e0; 
+}
+
+.nav-links a.active {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2em;
+    max-width: 1100px;
+    margin: 0 auto;    
+}
+
+main section {
+    background-color: #f9f9f9; 
+    padding: 2em;
+    margin-bottom: 2em; 
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07); 
+}
+
+main section h2 {
+    color: #4CAF50; 
+    margin-top: 0; 
+    margin-bottom: 1em;
+    border-bottom: 2px solid #4CAF50; 
+    padding-bottom: 0.5em;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+main section p {
+    text-align: justify; 
+    line-height: 1.7;
+}
+
+#titulo-index {
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #E0E0E0; 
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    
+
+#map {
+    height: 500px; 
+    margin-bottom: 2em;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 1px 4px rgba(0,0,0,0.07); 
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1.5em 0;
+    margin-top: 2em; 
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links li {
+        margin: 0.5em 0;
+    }
+
+    main {
+        padding: 1em; 
+    }
+
+    main section {
+        padding: 1.5em;
+    }
+
+    main section h2 {
+        font-size: 1.4em;
+    }
+}

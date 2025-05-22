@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de - Problemática Transporte Soacha</title>
+    <title>Problemática CV</title>
 
-    <!-- Esta línea enlaza tu hoja de estilos personalizada -->
-    <link rel="stylesheet" href="acerca-estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
 
-    <!-- Esta línea es para los estilos del mapa Leaflet (si los usas) -->
+    <link rel="stylesheet" href="css/acerca-estilos.css">
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
@@ -24,7 +24,7 @@
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
-            <li><a href="acerca.html" style="text-decoration: underline;">Acerca de</a></li>
+            <li><a href="acerca.html" class="active">Acerca de</a></li>
             <li><a href="descripcion.html">Descripción</a></li>
             <li><a href="autor.html">Autor</a></li>
         </ul>
@@ -63,7 +63,7 @@
             <div class="column" id="mapa-acerca-container">
                 <h3>Visualización Geográfica del Área de Estudio</h3>
                 <div id="mapAcerca" class="map-placeholder">
-                    (Espacio reservado para el mapa o visualización)
+                    Cargando mapa...
                 </div>
             </div>
         </div>
@@ -73,24 +73,10 @@
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
 
-    <!-- Script Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <!-- Script del mapa (puedes activarlo luego) -->
-    <!--
-    <script>
-        var mapAcerca = L.map('mapAcerca').setView([4.5981, -74.2078], 13);
-
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; OpenStreetMap contributors'
-        }).addTo(mapAcerca);
-
-        L.marker([4.5981, -74.2078]).addTo(mapAcerca)
-            .bindPopup('Zona de estudio principal en Soacha.')
-            .openPopup();
-    </script>
-    -->
+    <script src="js/mapa-acerca.js"></script>
 
 </body>
 </html>

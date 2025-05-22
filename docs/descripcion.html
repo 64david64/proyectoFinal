@@ -3,23 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Descripción</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
+    <title>Descripción del Proyecto - Problemática Transporte Soacha</title>
+
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link rel="stylesheet" href="css/descripcion-estilos.css">
+
+    </head>
 <body>
+
+    <header>
+        <h1>
+            Mala distribución y circulación de busetas (alimentadores de servicio público)
+            durante la hora pico nocturna en el municipio de Soacha, Cundinamarca. Colombia.
+        </h1>
+    </header>
 
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="acerca.html">Acerca de</a></li>
+            <li><a href="descripcion.html" class="active">Descripción</a></li>
             <li><a href="autor.html">Autor</a></li>
         </ul>
     </nav>
 
     <main>
-        <h2>Descripción</h2>
-        <p>Este proyecto analiza la movilidad en el barrio Ciudad Verde durante la hora pico nocturna.</p>
+        <section id="titulo-descripcion">
+            <h2>Descripción del Proyecto y Tecnologías</h2>
+        </section>
+
+        <section id="contenido-descripcion">
+            <h3>Motivación del Proyecto</h3>
+            <p>
+                Este proyecto nace como respuesta a una problemática tangible y cotidiana: las dificultades en el transporte público que afectan directamente la calidad de vida de miles de personas en Soacha. El objetivo principal es investigar y proponer visualizaciones que ayuden a comprender mejor la situación, con la esperanza de que esta información pueda contribuir a mitigar el impacto negativo en quienes dependen diariamente de este servicio esencial. Buscamos, de alguna manera, reducir los tiempos de espera, la congestión y mejorar la experiencia general del usuario.
+            </p>
+
+            <h3>Tecnologías Utilizadas</h3>
+            <p>
+                Para el desarrollo de este proyecto, se están empleando y se planea utilizar un conjunto de tecnologías web modernas y bibliotecas especializadas en el manejo de datos geoespaciales. La elección de estas herramientas se basa en su robustez, flexibilidad y la amplia comunidad de soporte que las respalda.
+            </p>
+            <ul>
+                <li>
+                    <strong>HTML (HyperText Markup Language):</strong> Es el esqueleto de todas las páginas web del proyecto. Se utiliza para estructurar el contenido de manera semántica, asegurando que la información sea accesible y bien organizada.
+                </li>
+                <li>
+                    <strong>CSS (Cascading Style Sheets):</strong> Se encarga de toda la presentación visual y el diseño. Mediante `estilos.css` (para estilos generales) y hojas de estilo específicas por página (como `descripcion-estilos.css`), se busca ofrecer una experiencia de usuario agradable, intuitiva y coherente a lo largo del sitio.
+                </li>
+                <li>
+                    <strong>JavaScript:</strong> Aporta la interactividad y dinamismo a las páginas. Es fundamental para manipular el DOM, gestionar eventos y, crucialmente, para interactuar con bibliotecas de mapeo y visualización de datos.
+                </li>
+                <li>
+                    <strong>Leaflet.js:</strong> Una biblioteca de JavaScript de código abierto, ligera pero potente, para crear mapas interactivos amigables para móviles. Ha sido la elección para la visualización de mapas base y la representación de polígonos geográficos, como se ve en la página principal y la sección "Acerca de".
+                </li>
+                <li>
+                    <strong>Turf.js (Próximamente):</strong> Se planea integrar Turf.js, una biblioteca avanzada de JavaScript para análisis geoespacial. Con Turf.js, podremos realizar operaciones como cálculos de áreas, intersecciones, buffers, y otras funciones espaciales directamente en el navegador. Esto será clave para el "componente práctico" del proyecto, permitiendo análisis más profundos y visualizaciones de datos espaciales más ricas y significativas.
+                </li>
+            </ul>
+            <p>
+                La combinación de estas tecnologías nos permite construir una aplicación web que no solo presenta información, sino que también ofrece herramientas para el análisis y la visualización interactiva de la problemática del transporte en Soacha y a nivel general.
+            </p>
+        </section>
     </main>
 
-</body>
+    <footer>
+        <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
+    </footer>
+
+    </body>
 </html>
