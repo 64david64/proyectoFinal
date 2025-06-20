@@ -1,171 +1,150 @@
+/* =================================================================
+   ESTILOS GENERALES - VERSIÓN FINAL (CORRECCIÓN DE ALINEACIÓN)
+   ================================================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --color-acento: #58a6ff;
+    --color-fondo: #141a22;
+    --color-superficie: #212830;
+    --color-texto-principal: #c9d1d9;
+    --color-texto-secundario: #8b949e;
+    --color-borde: #30363d;
+    --fuente-principal: 'Montserrat', sans-serif;
+    --sombra-suave: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--fuente-principal);
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    line-height: 1.7;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em;
-    width: 100%;
+    background-color: var(--color-superficie);
+    padding: 1.5em 1em;
+    border-bottom: 1px solid var(--color-borde);
+    text-align: center;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1em;
-}
-
-.logo {
-    max-height: 80px;
-    flex-shrink: 0; /* Evita que el logo se encoja */
-}
-
-.header-titles {
-    text-align: center; /* <-- CAMBIO: De 'left' a 'center' para centrar el texto */
-}
-
-header h1 {
-    font-size: 2.2em; /* <-- CAMBIO: Aumentado de 1.8em para mayor tamaño */
-    margin: 0;
-}
-
-header .subtitle {
-    font-size: 1.2em; /* <-- CAMBIO: Aumentado de 1.1em para mejor proporción */
-    margin: 0.2em 0 0 0;
-    font-weight: 300;
-}
+header h1 { font-size: 2em; margin: 0; }
 
 .navbar {
-    background-color: #4CAF50;
-    padding: 1em;
-    margin: 1em auto;
-    border-radius: 8px;
+    background-color: transparent;
+    padding: 0.5em;
+    margin: 1.5em auto;
+    border-radius: 10px;
     width: 95%;
-    max-width: 1100px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    max-width: 1100px;
+    border: 1px solid var(--color-borde);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 0;
-    padding: 0;
+    margin: 0; padding: 0;
 }
 
-.nav-links li {
-    margin: 0 1em;
-}
+.nav-links li { margin: 0 0.5em; }
 
 .nav-links a {
-    color: white;
+    color: var(--color-texto-principal);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
-    padding: 0.5em 0;
-    transition: color 0.3s ease;
+    padding: 0.8em 1.2em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.nav-links a:hover,
-.nav-links a:focus {
-    text-decoration: underline;
-    color: #e0e0e0; 
-}
-
-.nav-links a.active {
-    text-decoration: underline;
+.nav-links a:hover, .nav-links a.active {
+    background-color: var(--color-acento);
+    color: #ffffff;
 }
 
 main {
-    padding: 2em;
+    padding: 1em 2em;
     max-width: 1100px;
-    margin: 0 auto;    
+    margin: 0 auto;
 }
 
-main section {
-    background-color: #f9f9f9; 
-    padding: 2em;
-    margin-bottom: 2em; 
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07); 
+.contenido-principal {
+    background-color: var(--color-superficie);
+    padding: 2.5em;
+    margin-bottom: 2.5em;
+    border-radius: 10px;
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-suave);
+    text-align: left;
 }
 
-main section h2 {
-    color: #4CAF50; 
-    margin-top: 0; 
-    margin-bottom: 1em;
-    border-bottom: 2px solid #4CAF50; 
-    padding-bottom: 0.5em;
-    font-size: 1.8em;
+/* --- ESTILO CORREGIDO PARA TÍTULO CON LÍNEAS DECORATIVAS --- */
+.titulo-burbuja {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2.5em;
+    gap: 1.5em;
+}
+
+.titulo-burbuja::before,
+.titulo-burbuja::after {
+    content: '';
+    flex-grow: 1;
+    height: 1px;
+    background-color: var(--color-borde);
+}
+
+.titulo-burbuja h2 {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    box-shadow: var(--sombra-suave);
+    border-radius: 10px;
+    padding: 0.8em 1.5em;
+    margin: 0;
+    font-size: 1.6em;
+    color: var(--color-texto-principal);
     text-align: center;
+    border-bottom: none;
+    /* La línea "white-space: nowrap;" ha sido ELIMINADA para arreglar el bug */
 }
 
-main section p {
-    text-align: justify; 
-    line-height: 1.7;
+main h3 {
+    color: var(--color-texto-principal);
+    margin-top: 0;
+    font-size: 1.4em;
+    border-bottom: 1px solid var(--color-borde);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
 }
 
-#map {
-    height: 500px; 
-    margin-bottom: 2em;
-    border: 1px solid #ddd; 
-    border-radius: 8px; 
-    box-shadow: 0 1px 4px rgba(0,0,0,0.07); 
+main p {
+    color: var(--color-texto-secundario);
+    text-align: justify;
 }
 
 footer {
-    background-color: #222;
-    color: white;
+    background-color: var(--color-fondo);
+    color: var(--color-texto-secundario);
     text-align: center;
-    padding: 1.5em 0;
-    margin-top: 2em; 
+    padding: 2.5em 0;
+    margin-top: 2em;
+    border-top: 1px solid var(--color-borde);
 }
 
-footer p {
-    margin: 0;
+.map-container, #mapAcerca {
+    height: 450px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--sombra-suave);
 }
 
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-titles {
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links li {
-        margin: 0.5em 0;
-    }
-
-    main {
-        padding: 1em; 
-    }
-
-    main section {
-        padding: 1.5em;
-    }
-
-    main section h2 {
-        font-size: 1.4em;
-    }
+.leaflet-tile {
+    filter: none !important;
 }

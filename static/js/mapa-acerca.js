@@ -1,7 +1,6 @@
-
 if (document.getElementById('mapAcerca')) {
 
-    var mapAcerca = L.map('mapAcerca').setView([4.605827, -74.220333], 15);
+    var mapAcerca = L.map('mapAcerca').setView([4.605827, -74.220333], 14);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
@@ -28,4 +27,8 @@ if (document.getElementById('mapAcerca')) {
 
 } else {
     console.error("Error: No se encontró el elemento con id 'mapAcerca'. El mapa no puede inicializarse.");
-}
+
+        setTimeout(function () {
+            mapa.invalidateSize();
+        }, 100);
+    }

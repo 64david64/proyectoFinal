@@ -3,64 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problemática CV</title>
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-
+    <title>UrbFlow - Análisis de Transporte en Soacha</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <link rel="stylesheet" href="../static/css/estilos.css">
-
 </head>
 <body>
-
     <header>
-        <div class="header-container">
-            <div class="header-titles">
-                <h1>UrbFlow - Visualizador y Gestor de transporte</h1>
-
-            </div>
-        </div>
+        <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
     </header>
 
     <nav class="navbar">
-            <ul class="nav-links">
+        <ul class="nav-links">
             <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="acerca.html">Acerca de</a></li>
             <li><a href="descripcion.html">Descripción</a></li>
             <li><a href="autor.html">Autor</a></li>
-    </ul>
-</nav>
+        </ul>
+    </nav>
 
     <main>
-        <section id="descripcion">
-            <h2>Mala distribución y circulación de busetas (alimentadores de servicio público) 
-                durante la hora pico nocturna en el municipio de Soacha, Cundinamarca. Colombia.
-                </h2>
-            <p>
-                Los residentes del barrio Ciudad Verde en Soacha, Cundinamarca, experimentan una significativa
-                congestión en el transporte público, específicamente en las rutas circulares de busetas que tienen
-                su paradero principal cerca de la estación Terreros de TransMilenio. Durante la hora pico nocturna,
-                se presenta una mala distribución y circulación de las busetas de servicio público. Esto se traduce
-                en largos tiempos de espera, hacinamiento en los vehículos y posibles focos de inseguridad para los
-                usuarios que dependen de este medio de transporte para regresar a sus hogares. La limitada cobertura
-                del sistema TransMilenio en esta zona obliga a una alta dependencia de las busetas, cuya ineficiente
-                gestión agrava los problemas de movilidad. Este proyecto tiene como objetivo realizar un análisis sobre
-                la situación de transporte en el barrio <a href="https://es.wikipedia.org/wiki/Ciudad_Verde">Ciudad Verde</a>,
-                especialmente durante la jornada de hora pico nocturna y la distribución y circulación de las
-                busetas "alimentadoras" de transporte público.
-            </p>
-        </section>
+        <div class="titulo-burbuja">
+            <h2>Mala distribución y circulación de busetas (alimentadores de servicio público) durante la hora pico nocturna en el municipio de Soacha, Cundinamarca. Colombia.</h2>
+        </div>
 
-        <div id="map" style="height: 500px; margin-bottom: 2em;"></div>
-        </main>
+        <section class="contenido-principal">
+            <p>
+                Los residentes del barrio Ciudad Verde en Soacha, Cundinamarca, experimentan una significativa congestión en el transporte público, específicamente en las rutas circulares de busetas que tienen su paradero principal cerca de la estación Terreros de TransMilenio. Durante la hora pico nocturna, se presenta una mala distribución y circulación de las busetas de servicio público.
+            </p>
+            <div id="map" class="map-container"></div>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../static/js/programa.js"></script>
 </body>
 </html>

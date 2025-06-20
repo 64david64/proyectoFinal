@@ -1,177 +1,34 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    color: #333;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
-}
-
-header h1 {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 1em;
-    padding-right: 1em;
-    font-size: 1.8em;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.navbar {
-    background-color: #4CAF50;
-    padding: 1em;
-    margin: 1em auto;
-    border-radius: 8px;
-    width: 95%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 1em;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1em;
-    padding: 0.5em 0;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-    text-decoration: underline;
-    color: #e0e0e0;
-}
-
-.nav-links a.active {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 1.5em 0;
-    margin-top: 2em;
-}
-
-footer p {
-    margin: 0;
-}
-
-main {
-    padding: 2em;
-    max-width: 1200px; 
-    margin: 0 auto; 
-}
-
-#titulo-acerca {
-    text-align: center;
-    margin-bottom: 2em;
-    padding: 1em;
-    background-color: #f0f0f0; 
-    border-radius: 8px;
-}
-
-#titulo-acerca h2 {
-    color: #4CAF50;
-    margin: 0;
-}
+/* =================================================================
+   Estilos específicos para "Acerca de" (Versión Final Simplificada)
+   ================================================================= */
 
 .layout-container {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 2em; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+    align-items: stretch;
+    text-align: left; /* Alinea el contenido de las columnas a la izquierda */
 }
 
 .column {
-    flex: 1; 
-    min-width: 300px; 
-    padding: 1.5em;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-}
-
-.column h3 {
-    color: #333;
-    margin-top: 0;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 2.5em;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: var(--sombra-suave);
 }
 
 #texto-acerca ul {
     list-style: disc;
-    margin-left: 1.5em;
-    padding-left: 0;
+    padding-left: 20px;
+    color: var(--color-texto-secundario);
 }
 
-#texto-acerca ul li {
-    margin-bottom: 0.5em;
-}
-
-#texto-acerca p {
-    text-align: justify;
-    margin-bottom: 1em;
-}
-
-#mapa-acerca-container {
-    display: flex;
-    flex-direction: column;
-}
-
-#mapAcerca, .map-placeholder {
+#mapAcerca {
+    height: 450px;
     width: 100%;
-    height: 400px; 
-    background-color: #e9e9e9; 
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #777;
-    border: 1px dashed #ccc; 
-    flex-grow: 1;
-}
-
-@media (max-width: 768px) {
-    .layout-container {
-        flex-direction: column; 
-    }
-
-    .column {
-        margin-bottom: 1.5em; 
-    }
-
-    header h1 {
-        font-size: 1.5em; 
-    }
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links li {
-        margin: 0.5em 0; 
-    }
+    margin-top: 1.5em;
 }

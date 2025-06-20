@@ -3,24 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Problemática CV</title>
-
+    <title>Acerca de - UrbFlow</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <link rel="stylesheet" href="../static/css/estilos.css">
-
     <link rel="stylesheet" href="../static/css/acerca-estilos.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
 <body>
-
     <header>
-        <h1>
-            Mala distribución y circulación de busetas (alimentadores de servicio público)
-            durante la hora pico nocturna en el municipio de Soacha, Cundinamarca. Colombia.
-        </h1>
+        <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
     </header>
-
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
@@ -29,54 +20,32 @@
             <li><a href="autor.html">Autor</a></li>
         </ul>
     </nav>
-
     <main>
-        <section id="titulo-acerca">
+        <div class="titulo-burbuja">
             <h2>Acerca de Este Proyecto</h2>
-        </section>
+        </div>
 
         <div class="layout-container">
             <div class="column" id="texto-acerca">
                 <h3>Motivación y Contexto</h3>
-                <p>
-                    Este proyecto surge de la observación directa y la experiencia de los
-                    desafíos diarios que enfrentan los residentes de Soacha, específicamente
-                    en áreas como Ciudad Verde, al depender del transporte público tipo buseta.
-                    La hora pico nocturna se convierte en un periodo crítico donde la eficiencia
-                    del sistema de transporte se ve severamente comprometida.
-                </p>
-                <p>
-                    La problemática no solo afecta los tiempos de viaje, sino también la calidad
-                    de vida de los usuarios, generando estrés, exposición a condiciones de
-                    hacinamiento y, en algunos casos, riesgos de seguridad. Este análisis busca
-                    profundizar en las causas y características de esta situación.
-                </p>
+                <p>Este proyecto surge de la observación directa y la experiencia de los desafíos diarios que enfrentan los residentes de Soacha. La hora pico nocturna se convierte en un periodo crítico donde la eficiencia del sistema de transporte se ve severamente comprometida.</p>
                 <h3>Objetivos</h3>
                 <ul>
                     <li>Analizar los patrones de distribución y circulación de las busetas.</li>
                     <li>Identificar los cuellos de botella y puntos de mayor congestión.</li>
                     <li>Evaluar el impacto en los tiempos de espera y viaje de los usuarios.</li>
-                    <li>Visualizar geográficamente la problemática (como se intenta con el mapa).</li>
                 </ul>
             </div>
-
             <div class="column" id="mapa-acerca-container">
                 <h3>Visualización Geográfica del Área de Estudio</h3>
-                <div id="mapAcerca" class="map-placeholder">
-                    Cargando mapa...
-                </div>
+                <div id="mapAcerca"></div>
             </div>
         </div>
     </main>
-
     <footer>
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="../static/js/mapa-acerca.js"></script>
-
 </body>
 </html>

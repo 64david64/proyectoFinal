@@ -3,24 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre el Autor - Problemática Transporte Soacha</title>
-
+    <title>Autor - UrbFlow</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <link rel="stylesheet" href="../static/css/estilos.css">
-
     <link rel="stylesheet" href="../static/css/autor-estilos.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
 <body>
-
     <header>
-        <h1>
-            Mala distribución y circulación de busetas (alimentadores de servicio público)
-            durante la hora pico nocturna en el municipio de Soacha, Cundinamarca. Colombia.
-        </h1>
+        <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
     </header>
-
     <nav class="navbar">
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
@@ -29,64 +20,30 @@
             <li><a href="autor.html" class="active">Autor</a></li>
         </ul>
     </nav>
-
     <main>
-        <section id="titulo-autor">
+        <div class="titulo-burbuja">
             <h2>Sobre el Autor</h2>
-        </section>
-
-        <div class="layout-container-autor">
-            <div class="columna columna-foto">
-                <img src="../static/img/img.jpg" alt="Foto de Juan David Acosta Rodríguez">
-            </div>
-            <div class="columna columna-texto">
-                <h3>Juan David Acosta Rodríguez</h3>
-                <p>
-                Actualmente, soy estudiante de <strong>Ingeniería Catastral y Geodesia</strong> en la Universidad Distrital,
-                cursando el tercer semestre. Me apasiona la programación y las TICs, y formo parte activa del 
-                semillero de investigación <strong>AstroIngeniería</strong>, donde exploramos e investigamos sobre
-                astronomía y geociencias.
-                </p>
-            </div>
         </div>
 
-        <section id="ubicacion-universidad">
+        <section class="contenido-principal layout-container-autor">
+            <div class="columna-foto">
+                <img src="../static/img/img.jpg" alt="Foto de Juan David Acosta Rodríguez">
+            </div>
+            <div class="columna-texto">
+                <h3>Juan David Acosta Rodríguez</h3>
+                <p>Actualmente, soy estudiante de <strong>Ingeniería Catastral y Geodesia</strong> en la Universidad Distrital, cursando el tercer semestre. Me apasiona la programación y las TICs, y formo parte activa del semillero de investigación <strong>AstroIngeniería</strong>, donde exploramos e investigamos sobre astronomía y geociencias.</p>
+            </div>
+        </section>
+
+        <section class="contenido-principal">
             <h3>Mi Alma Máter: Universidad Distrital</h3>
-            <p class="subtitulo-mapa">Facultad de Ingeniería, sede La Macarena.</p>
-            <div id="mapaUniversidad" class="mapa-container">
-                </div>
+            <div id="mapaUniversidad" class="map-container"></div>
         </section>
     </main>
-
     <footer>
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
-
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-    <script>
-
-        var latitudUni = 4.628158297019748;
-        var longitudUni = -74.06590820354154;
-
-        if (document.getElementById('mapaUniversidad')) {
-            var mapaU = L.map('mapaUniversidad').setView([latitudUni, longitudUni], 17); 
-
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 19,
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(mapaU);
-
-            var markerUniversidad = L.marker([latitudUni, longitudUni]).addTo(mapaU)
-                .bindPopup("<b>Universidad Distrital F.J.C.</b><br>Facultad de Ingeniería<br>Ing. Catastral y Geodesia")
-                .openPopup();
-
-            console.log("Mapa de la universidad inicializado.");
-        } else {
-            console.error("Elemento 'mapaUniversidad' no encontrado.");
-        }
-    </script>
-
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/js/mapa-autor.js"></script>
 </body>
 </html>
