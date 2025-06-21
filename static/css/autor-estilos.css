@@ -1,28 +1,79 @@
 .layout-container-autor {
+
     display: flex;
     flex-wrap: wrap;
-    gap: 2.5em;
-    align-items: center;
+    align-items: center; 
+    gap: 1em;
 }
 
 .columna-foto {
-    flex: 1;
-    min-width: 250px;
+    flex: 0 0 220px; 
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .columna-foto img {
-    max-width: 100%;
-    width: 220px;
-    height: 220px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 5px solid var(--color-superficie);
     box-shadow: var(--sombra-suave);
 }
 
 .columna-texto {
-    flex: 2;
+    flex: 1; 
     min-width: 300px;
+    padding: 1em 1.5em;
+    display: flex;
+    flex-direction: column; 
+}
+
+.columna-texto h3 {
+    margin-top: 0;
+    margin-bottom: 0.5em; 
+}
+
+.columna-texto p {
+    text-align: left; 
+    margin-bottom: 0;
+}
+
+.redes-profesionales {
+    margin-top: auto; 
+    padding-top: 1.5em;
+    border-top: 1px solid var(--color-borde);
+}
+
+.redes-profesionales h4 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    color: var(--color-texto-secundario);
+    font-size: 1em;
+    text-align: left;
+}
+
+.github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8em;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    padding: 0.8em 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--color-texto-principal);
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: #0d1117;
+    transform: translateY(-2px);
+}
+
+.github-link img {
+    height: 24px;
+    width: 24px;
 }

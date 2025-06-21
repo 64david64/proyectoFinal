@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Añadir Punto - UrbFlow</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="../static/css/estilos.css">
+    <link rel="stylesheet" href="../static/css/add-point-estilos.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="../static/svg/logo.svg" alt="Logo de UrbFlow" class="header-logo">
+            </a>
+            <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html">Acerca de</a></li>
+            <li><a href="descripcion.html">Descripción</a></li>
+            <li><a href="autor.html">Autor</a></li>
+            <li><a href="add-point.html" class="active">Añadir Punto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="titulo-burbuja">
+            <h2>Reportar Incidencia o Paradero</h2>
+        </div>
+        
+        <section class="contenido-principal layout-add-point">
+            <div class="columna-mapa">
+                <h3>1. Haz clic en el mapa para ubicar el punto</h3>
+                <div id="map" class="map-container"></div>
+                <p id="coords-feedback">Aún no has seleccionado un punto.</p>
+            </div>
+
+            <div class="columna-formulario">
+                <h3>Rellena los datos</h3>
+                <form action="/add_point" method="POST">
+                    
+                    <input type="hidden" id="latitud" name="latitud" required>
+                    <input type="hidden" id="longitud" name="longitud" required>
+
+                    <div class="form-group">
+                        <label for="numruta">Número de Ruta (Opcional)</label>
+                        <input type="text" id="numruta" name="numruta" placeholder="Ej: 544A">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" placeholder="Ej: Calle 13 #7-25" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="horainicio">Fecha y Hora de Inicio</label>
+                        <input type="datetime-local" id="horainicio" name="horainicio" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="horafin">Fecha y Hora de Fin</label>
+                        <input type="datetime-local" id="horafin" name="horafin" required>
+                    </div>
+                    
+                    <button type="submit" class="boton-enviar">Enviar Reporte</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/js/add-point.js"></script>
+</body>
+</html>

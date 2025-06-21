@@ -1,0 +1,81 @@
+/* Estilos para la página de Añadir Punto (Simplificados) */
+
+.layout-add-point {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5em;
+}
+
+.columna-mapa {
+    flex: 2;
+    min-width: 350px;
+}
+
+.columna-formulario {
+    flex: 1;
+    min-width: 300px;
+}
+
+#coords-feedback {
+    margin-top: 1em;
+    color: var(--color-texto-secundario);
+    font-style: italic;
+    text-align: center;
+}
+
+/* --- Estilos del Formulario --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/* LA REGLA ".form-group-inline" HA SIDO ELIMINADA PORQUE YA NO SE USA */
+
+form label {
+    font-weight: bold;
+    color: var(--color-texto-secundario);
+    text-align: left;
+}
+
+form input[type="text"],
+form input[type="time"],
+form input[type="datetime-local"] {
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    color: var(--color-texto-principal);
+    padding: 0.8em;
+    border-radius: 6px;
+    font-family: var(--fuente-principal);
+    font-size: 1em;
+    width: 100%;
+}
+
+form input::placeholder {
+    color: var(--color-texto-secundario);
+    opacity: 0.7;
+}
+
+.boton-enviar {
+    background-color: var(--color-acento);
+    color: #ffffff;
+    border: none;
+    padding: 1em;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 1em;
+}
+
+.boton-enviar:hover {
+    background-color: #4a91da;
+    transform: translateY(-2px);
+}

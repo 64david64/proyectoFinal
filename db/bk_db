@@ -55,8 +55,8 @@ CREATE TABLE public.paraderos (
     localizacion point NOT NULL,
     numruta character varying(10),
     direccion character varying(50) NOT NULL,
-    horainicio date NOT NULL,
-    horafin date NOT NULL
+    horainicio time NOT NULL, -- MODIFICADO
+    horafin time NOT NULL    -- MODIFICADO
 );
 
 

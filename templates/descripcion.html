@@ -5,19 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Descripción - UrbFlow</title>
     <link rel="stylesheet" href="../static/css/estilos.css">
+    <link rel="stylesheet" href="../static/css/descripcion-estilos.css">
 </head>
 <body>
     <header>
-        <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="../static/svg/logo.svg" alt="Logo de UrbFlow" class="header-logo">
+            </a>
+            <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
+        </div>
     </header>
+
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="acerca.html">Acerca de</a></li>
-            <li><a href="descripcion.html" class="active">Descripción</a></li>
-            <li><a href="autor.html">Autor</a></li>
-        </ul>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="descripcion.html">Descripción</a></li>
+                <li><a href="autor.html">Autor</a></li>
+                <li><a href="add-point.html">Añadir Punto</a></li>
+            </ul>
     </nav>
+    
     <main>
         <div class="titulo-burbuja">
             <h2>Descripción del Proyecto y Tecnologías</h2>
@@ -26,14 +35,62 @@
         <section class="contenido-principal">
             <h3>Motivación del Proyecto</h3>
             <p>Este proyecto nace como respuesta a una problemática tangible y cotidiana: las dificultades en el transporte público que afectan directamente la calidad de vida de miles de personas en Soacha. El objetivo principal es investigar y proponer visualizaciones que ayuden a comprender mejor la situación.</p>
+            
             <h3>Tecnologías Utilizadas</h3>
-            <ul>
-                <li><strong>HTML:</strong> Es el esqueleto de todas las páginas web del proyecto.</li>
-                <li><strong>CSS:</strong> Se encarga de toda la presentación visual y el diseño.</li>
-                <li><strong>JavaScript:</strong> Aporta la interactividad y dinamismo a las páginas.</li>
-                <li><strong>Leaflet.js:</strong> Biblioteca para crear mapas interactivos amigables para móviles.</li>
-            </ul>
-        </section>
+            <p>Para el desarrollo de este proyecto se emplean un conjunto de tecnologías web modernas, bibliotecas de Python y herramientas de desarrollo que permiten un flujo de trabajo eficiente y un producto final robusto.</p>
+
+            <div class="tech-grid">
+                
+                <div class="tech-card">
+                    <img src="../static/img/tech/python.png" alt="Logo de Python">
+                    <h4>Python</h4>
+                    <p>El lenguaje de programación principal para toda la lógica del servidor (backend) y el procesamiento de datos.</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="../static/img/tech/flask.png" alt="Logo de Flask">
+                    <h4>Flask</h4>
+                    <p>Un micro-framework de Python que utilizamos para construir la aplicación web, gestionar las rutas y servir las páginas.</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="../static/img/tech/sqlalchemy.png" alt="Logo de SQLAlchemy">
+                    <h4>SQLAlchemy</h4>
+                    <p>Una librería (ORM) que facilita la comunicación entre nuestra aplicación Python y la base de datos de una forma orientada a objetos.</p>
+                </div>
+                
+                <div class="tech-card">
+                    <img src="../static/img/tech/html5.png" alt="Logo de HTML5">
+                    <h4>HTML5</h4>
+                    <p>El lenguaje de marcado estándar para crear la estructura y el esqueleto de todas las páginas de nuestro portal.</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="../static/img/tech/css3.png" alt="Logo de CSS3">
+                    <h4>CSS3</h4>
+                    <p>Se encarga de toda la presentación visual, el diseño, los colores y las animaciones que dan vida a la interfaz.</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="../static/img/tech/javascript.png" alt="Logo de JavaScript">
+                    <h4>JavaScript</h4>
+                    <p>Aporta la interactividad y el dinamismo en el navegador del usuario, especialmente en la manipulación de los mapas.</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="../static/img/tech/leaflet.png" alt="Logo de Leaflet.js">
+                    <h4>Leaflet.js</h4>
+                    <p>La biblioteca de JavaScript especializada que nos permite crear y manipular los mapas interactivos del proyecto.</p>
+                </div>
+
+                <div class="tech-card">
+                    <img src="../static/img/tech/github.png" alt="Logo de GitHub">
+                    <h4>GitHub</h4>
+                    <p>Plataforma que usamos para el control de versiones (con Git) y para el despliegue automático mediante GitHub Actions.</p>
+                </div>
+
+            </div>
+            </section>
     </main>
     <footer>
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>

@@ -4,33 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UrbFlow - Análisis de Transporte en Soacha</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <link rel="stylesheet" href="../static/css/estilos.css">
 </head>
 <body>
-    <header>
-        <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
+
+        <header>
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="../static/svg/logo.svg" alt="Logo de UrbFlow" class="header-logo">
+            </a>
+            <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
+        </div>
     </header>
 
     <nav class="navbar">
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="acerca.html">Acerca de</a></li>
-            <li><a href="descripcion.html">Descripción</a></li>
-            <li><a href="autor.html">Autor</a></li>
-        </ul>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="descripcion.html">Descripción</a></li>
+                <li><a href="autor.html">Autor</a></li>
+                <li><a href="add-point.html">Añadir Punto</a></li>
+            </ul>
     </nav>
 
     <main>
         <div class="titulo-burbuja">
-            <h2>Mala distribución y circulación de busetas (alimentadores de servicio público) durante la hora pico nocturna en el municipio de Soacha, Cundinamarca. Colombia.</h2>
+            <h2>Mala distribución y circulación de busetas durante la hora pico nocturna en el municipio de Soacha, Cundinamarca.</h2>
         </div>
 
         <section class="contenido-principal">
+            <h3>Bienvenido a UrbFlow</h3>
             <p>
-                Los residentes del barrio Ciudad Verde en Soacha, Cundinamarca, experimentan una significativa congestión en el transporte público, específicamente en las rutas circulares de busetas que tienen su paradero principal cerca de la estación Terreros de TransMilenio. Durante la hora pico nocturna, se presenta una mala distribución y circulación de las busetas de servicio público.
+                <strong>UrbFlow</strong> es una iniciativa dedicada a visualizar y analizar los desafíos de movilidad urbana que enfrentan miles de ciudadanos diariamente. Nuestra investigación inicial se centra en la problemática del transporte público en Soacha, un área con una dinámica de crecimiento y demanda únicas.
             </p>
-            <div id="map" class="map-container"></div>
+            <p>
+                A través de este portal, buscamos no solo exponer datos, sino también crear conciencia sobre la calidad, eficiencia y seguridad del transporte. Creemos que una mejor comprensión de los flujos de movilidad es el primer paso hacia la planificación de soluciones más inteligentes y humanas.
+            </p>
+            
+            <img src="../static/img/ciudad-verde.jpg" alt="Vista aérea del barrio Ciudad Verde en Soacha" class="imagen-principal">
         </section>
     </main>
 
@@ -38,7 +49,5 @@
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="../static/js/programa.js"></script>
-</body>
+    </body>
 </html>
