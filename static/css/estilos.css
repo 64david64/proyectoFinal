@@ -1,6 +1,3 @@
-/* =================================================================
-   ESTILOS GENERALES - VERSIÓN FINAL CON ANIMACIONES
-   ================================================================= */
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -173,9 +170,6 @@ footer {
     filter: none !important;
 }
 
-/* =================================================================
-   NUEVO CÓDIGO DE ANIMACIONES
-   ================================================================= */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -189,4 +183,77 @@ footer {
 
 .animacion-entrada {
     animation: fadeIn 0.7s ease-out forwards;
+}
+
+.colaborar-section {
+    padding: 2em 1em; 
+    text-align: center;
+}
+
+.colaborar-titulo {
+    color: var(--color-texto-principal);
+    font-size: 1.8em;
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+}
+
+.colaborar-container {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.colaborar-card {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: 10px;
+    padding: 2em;
+    flex-basis: 300px;
+    flex-grow: 1;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.card-icon svg {
+    width: 48px;
+    height: 48px;
+    color: var(--color-acento);
+    margin-bottom: 1em;
+}
+
+.colaborar-card h3 {
+    margin-bottom: 0.5em;
+    color: var(--color-texto-principal);
+    border-bottom: none; /* Quitamos el borde para este h3 */
+}
+
+.colaborar-card p {
+    color: var(--color-texto-secundario);
+    font-size: 0.9em;
+    margin-bottom: 1.5em;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.boton-card {
+    display: inline-block;
+    width: 100%;
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    color: var(--color-texto-principal);
+    padding: 0.8em 1em;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-card:hover {
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
+    color: #fff;
 }

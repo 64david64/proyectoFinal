@@ -1,5 +1,3 @@
-/* Estilos para la página de Añadir Punto (Simplificados) */
-
 .layout-add-point {
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +21,6 @@
     text-align: center;
 }
 
-/* --- Estilos del Formulario --- */
 form {
     display: flex;
     flex-direction: column;
@@ -35,8 +32,6 @@ form {
     flex-direction: column;
     gap: 0.5em;
 }
-
-/* LA REGLA ".form-group-inline" HA SIDO ELIMINADA PORQUE YA NO SE USA */
 
 form label {
     font-weight: bold;
