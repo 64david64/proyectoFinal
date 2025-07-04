@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca de - UrbFlow</title>
+    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <link rel="stylesheet" href="../static/css/estilos.css">
     <link rel="stylesheet" href="../static/css/acerca-estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-        <header>
+    <header>
         <div class="header-container">
             <a href="index.html" class="logo-link">
-                <img src="../static/svg/logo.svg" alt="Logo de UrbFlow" class="header-logo">
+            <img src="../static/svg/logo.svg" alt="Logo de UrbFlow" class="header-logo logo-dark">
+            <img src="../static/svg/logo-negativo.svg" alt="Logo de UrbFlow en negativo" class="header-logo logo-light">
             </a>
             <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
+            <button id="theme-toggle" aria-label="Alternar modo claro/oscuro"></button>
         </div>
     </header>
 
     <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="acerca.html">Acerca de</a></li>
-                <li><a href="descripcion.html">Descripción</a></li>
-                <li><a href="autor.html">Autor</a></li>
-                <li><a href="add-point.html">Añadir Punto</a></li>
-            </ul>
+        <button class="nav-toggle" aria-label="Abrir menú">
+            <span class="hamburger"></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acerca.html" class="active">Acerca de</a></li>
+            <li><a href="descripcion.html">Descripción</a></li>
+            <li><a href="autor.html">Autor</a></li>
+            <li><a href="add-point.html">Añadir Punto</a></li>
+        </ul>
     </nav>
     
     <main>
@@ -37,7 +46,7 @@
         <div class="layout-container animacion-entrada">
             <div class="column" id="texto-acerca">
                 <h3>Motivación y Contexto</h3>
-                <p>Este proyecto surge de la observación directa y la experiencia de los desafíos diarios que enfrentan los residentes de Soacha. La hora pico nocturna se convierte en un periodo crítico donde la eficiencia del sistema de transporte se ve severamente comprometida.</p>
+                <p>Este proyecto surge de la observación directa y la experiencia de los desafíos diarios que enfrentan los residentes de Soacha.</p>
                 <h3>Objetivos</h3>
                 <ul>
                     <li>Analizar los patrones de distribución y circulación de las busetas.</li>
@@ -47,14 +56,16 @@
             </div>
             <div class="column" id="mapa-acerca-container">
                 <h3>Visualización Geográfica del Área de Estudio</h3>
-                <div id="mapAcerca"></div>
+                <div id="mapa-acerca" class="map-container"></div>
             </div>
         </div>
     </main>
+
     <footer>
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="../static/js/mapa-acerca.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script src="../static/js/programa.js" defer></script>
 </body>
 </html>

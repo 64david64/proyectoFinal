@@ -21,10 +21,3 @@
     padding-left: 20px;
     color: var(--color-texto-secundario);
 }
-
-#mapAcerca {
-    height: 450px;
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 1.5em;
-}

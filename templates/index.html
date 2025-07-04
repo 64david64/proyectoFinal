@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UrbFlow - Análisis de Transporte en Soacha</title>
+    <title>UrbFlow - Inicio</title>
+    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="../static/css/estilos.css">
 </head>
 <body>
@@ -11,13 +16,18 @@
     <header>
         <div class="header-container">
             <a href="index.html" class="logo-link">
-                <img src="../static/svg/logo.svg" alt="Logo de UrbFlow" class="header-logo">
+            <img src="../static/svg/logo.svg" alt="Logo de UrbFlow" class="header-logo logo-dark">
+            <img src="../static/svg/logo-negativo.svg" alt="Logo de UrbFlow en negativo" class="header-logo logo-light">
             </a>
             <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
+            <button id="theme-toggle" aria-label="Alternar modo claro/oscuro"></button>
         </div>
     </header>
 
     <nav class="navbar">
+        <button class="nav-toggle" aria-label="Abrir menú">
+            <span class="hamburger"></span>
+        </button>
         <ul class="nav-links">
             <li><a href="index.html" class="active">Inicio</a></li>
             <li><a href="acerca.html">Acerca de</a></li>
@@ -34,54 +44,63 @@
 
         <section class="contenido-principal animacion-entrada">
             <h3>Bienvenido a UrbFlow</h3>
-            <p>
-                <strong>UrbFlow</strong> es una iniciativa dedicada a visualizar y analizar los desafíos de movilidad urbana que enfrentan miles de ciudadanos diariamente. Nuestra investigación inicial se centra en la problemática del transporte público en Soacha, un área con una dinámica de crecimiento y demanda únicas.
-            </p>
-            <p>
-                A través de este portal, buscamos no solo exponer datos, sino también crear conciencia sobre la calidad, eficiencia y seguridad del transporte. Creemos que una mejor comprensión de los flujos de movilidad es el primer paso hacia la planificación de soluciones más inteligentes y humanas.
-            </p>
-            
-            <img src="../static/img/ciudad-verde.jpg" alt="Vista aérea del barrio Ciudad Verde en Soacha" class="imagen-principal" loading="lazy">
+            <p><strong>UrbFlow</strong> es una iniciativa dedicada a visualizar y analizar los desafíos de movilidad urbana que enfrentan miles de ciudadanos diariamente.</p>
+            <p>A través de este portal, buscamos no solo exponer datos, sino también crear conciencia sobre la calidad, eficiencia y seguridad del transporte.</p>
+        </section>
+
+        <section class="swiper-section animacion-entrada">
+            <h2 class="galeria-titulo">Explora el Área de Estudio</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../static/img/gallery/imagen1.jpg" alt="Vista de calle en Ciudad Verde" loading="lazy">
+                        <div class="swiper-slide-caption"><p>Vías principales del barrio Ciudad Verde.</p></div>
+                    </div>
+                    <div class="swiper-slide"><img src="../static/img/gallery/imagen2.jpg" alt="Transporte público en Soacha" loading="lazy">
+                        <div class="swiper-slide-caption"><p>Busetas, el principal medio de transporte público.</p></div>
+                    </div>
+                    <div class="swiper-slide"><img src="../static/img/gallery/imagen3.jpg" alt="Panorámica de Soacha" loading="lazy">
+                        <div class="swiper-slide-caption"><p>Vista panorámica de la densidad urbana.</p></div>
+                    </div>
+                    <div class="swiper-slide"><img src="../static/img/gallery/imagen4.jpg" alt="Detalle de paradero de bus" loading="lazy">
+                        <div class="swiper-slide-caption"><p>Paradero de autobús, punto de encuentro diario.</p></div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
         </section>
 
         <section class="colaborar-section animacion-entrada">
             <h2 class="colaborar-titulo">Comienza a Colaborar</h2>
             <div class="colaborar-container">
-
-                <div class="colaborar-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    </div>
+                 <div class="colaborar-card">
+                    <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                     <h3>Reporta un Incidente</h3>
-                    <p>¿Detectaste una congestión, un paradero en mal estado u otro problema? Añade un punto en el mapa y ayúdanos a registrarlo.</p>
+                    <p>Añade un punto en el mapa y ayúdanos a registrar congestiones, demoras o problemas.</p>
                     <a href="add-point.html" class="boton-card">Ir al Formulario</a>
                 </div>
-
                 <div class="colaborar-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
-                    </div>
+                    <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
                     <h3>Conoce el Proyecto</h3>
-                    <p>Descubre los objetivos, la metodología y la tecnología que impulsan esta iniciativa académica y social.</p>
+                    <p>Descubre los objetivos, la metodología y la tecnología que impulsan esta iniciativa.</p>
                     <a href="descripcion.html" class="boton-card">Leer Más</a>
                 </div>
-
                 <div class="colaborar-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                    </div>
+                    <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                     <h3>Sobre el Autor</h3>
-                    <p>Conoce más sobre el desarrollador detrás de este proyecto y su motivación para llevarlo a cabo.</p>
+                    <p>Conoce más sobre el desarrollador detrás de este proyecto y su motivación.</p>
                     <a href="autor.html" class="boton-card">Ver Perfil</a>
                 </div>
-
             </div>
         </section>
-        </main>
+    </main>
 
     <footer>
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
-
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="../static/js/programa.js" defer></script>
 </body>
 </html>
