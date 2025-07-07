@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no Encontrada - UrbFlow</title>
+    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../static/css/estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+       </header>
+    <nav class="navbar">
+       </nav>
+    
+    <main>
+        <div class="card animacion-entrada" style="text-align: center; max-width: 700px; margin: 2em auto;">
+            <div class="card-icon" style="margin: 0 auto 1em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+            </div>
+            <h1 style="font-size: 4em; margin:0; line-height: 1;">404</h1>
+            <h2>Página No Encontrada</h2>
+            <p style="font-size: 1.1em; color: var(--color-texto-secundario);">Lo sentimos, la página que estás buscando no existe o fue movida.</p>
+            <a href="{{ url_for('index') }}" class="boton-card" style="max-width: 200px; margin: 1.5em auto 0;">Volver al Inicio</a>
+        </div>
+    </main>
+
+    <footer class="text-center py-4 bg-dark text-light">
+       </footer>
+
+    <script src="{{ url_for('static', filename='js/programa.js') }}" defer></script>
+</body>
+</html>

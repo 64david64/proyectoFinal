@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Autor - UrbFlow</title>
-    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-    <link rel="stylesheet" href="../static/css/estilos.css">
-    <link rel="stylesheet" href="../static/css/autor-estilos.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/autor-estilos.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -15,11 +15,11 @@
 <body>
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo-link">
-            <img src="../static/svg/logo.svg" alt="Logo de UrbFlow" class="header-logo logo-dark">
-            <img src="../static/svg/logo-negativo.svg" alt="Logo de UrbFlow en negativo" class="header-logo logo-light">
+            <a href="{{ url_for('index') }}" class="logo-link">
+                <img src="{{ url_for('static', filename='svg/logo.svg') }}" alt="Logo de UrbFlow" class="header-logo logo-dark">
+                <img src="{{ url_for('static', filename='svg/logo-negativo.svg') }}" alt="Logo de UrbFlow en negativo" class="header-logo logo-light">
             </a>
-            <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
+            <span class="site-slogan">UrbFlow: Análisis de Transporte en Soacha</span>
             <button id="theme-toggle" aria-label="Alternar modo claro/oscuro"></button>
         </div>
     </header>
@@ -29,21 +29,22 @@
             <span class="hamburger"></span>
         </button>
         <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="acerca.html">Acerca de</a></li>
-            <li><a href="descripcion.html">Descripción</a></li>
-            <li><a href="autor.html" class="active">Autor</a></li>
-            <li><a href="add-point.html">Añadir Punto</a></li>
+            <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'index' else '' }}">Inicio</a></li>
+            <li><a href="{{ url_for('acerca') }}" class="{{ 'active' if active_page == 'acerca' else '' }}">Acerca de</a></li>
+            <li><a href="{{ url_for('descripcion') }}" class="{{ 'active' if active_page == 'descripcion' else '' }}">Descripción</a></li>
+            <li><a href="{{ url_for('autor') }}" class="{{ 'active' if active_page == 'autor' else '' }}">Autor</a></li>
+            <li><a href="{{ url_for('addpoint_page') }}" class="{{ 'active' if active_page == 'addpoint_page' else '' }}">Añadir Punto</a></li>
+            <li><a href="{{ url_for('visualizacion_page') }}" class="{{ 'active' if active_page == 'visualizacion' else '' }}">Mapa de Incidencias</a></li>
         </ul>
     </nav>
 
     <main>
         <div class="titulo-burbuja animacion-entrada">
-            <h2>Sobre el Autor</h2>
+            <h1>Sobre el Autor</h1>
         </div>
-        <section class="contenido-principal layout-container-autor animacion-entrada">
+        <section class="card layout-container-autor animacion-entrada">
             <div class="columna-foto">
-                <img src="../static/img/img.jpg" alt="Foto de Juan David Acosta Rodríguez">
+                <img src="{{ url_for('static', filename='img/img.jpg') }}" alt="Foto de Juan David Acosta Rodríguez">
             </div>
             <div class="columna-texto">
                 <h3>Juan David Acosta Rodríguez</h3>
@@ -51,22 +52,27 @@
                 <div class="redes-profesionales">
                     <h4>Visita mi perfil:</h4>
                     <a href="https://github.com/64david64" class="github-link" target="_blank" rel="noopener noreferrer">
-                        <img src="../static/img/tech/github.png" alt="Logo de GitHub">
+                        <img src="{{ url_for('static', filename='img/tech/github.png') }}" alt="Logo de GitHub">
                         <span>Ver en GitHub</span>
                     </a>
                     </div>
             </div>
         </section>
-        <section class="contenido-principal animacion-entrada">
+        <section class="card animacion-entrada">
             <h3>Mi Alma Máter: Universidad Distrital</h3>
             <div id="mapaUniversidad" class="map-container"></div>
         </section>
     </main>
     <footer>
+        <div class="footer-links">
+            <a href="{{ url_for('index') }}">Inicio</a>
+            <a href="{{ url_for('acerca') }}">Acerca de</a>
+            <a href="{{ url_for('addpoint_page') }}">Reportar</a>
+        </div>
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
-    <script src="../static/js/programa.js" defer></script>
+    <script src="{{ url_for('static', filename='js/programa.js') }}" defer></script>
 </body>
 </html>

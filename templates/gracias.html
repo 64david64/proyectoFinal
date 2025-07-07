@@ -3,17 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de - UrbFlow</title>
+    <title>Gracias - UrbFlow</title>
     <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/acerca-estilos.css') }}">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <header>
         <div class="header-container">
             <a href="{{ url_for('index') }}" class="logo-link">
@@ -25,44 +20,26 @@
         </div>
     </header>
 
-    <nav class="navbar">
-        <button class="nav-toggle" aria-label="Abrir menú">
-            <span class="hamburger"></span>
-        </button>
-        <ul class="nav-links">
-            <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'index' else '' }}">Inicio</a></li>
+    <ul class="nav-links">
+        <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'index' else '' }}">Inicio</a></li>
             <li><a href="{{ url_for('acerca') }}" class="{{ 'active' if active_page == 'acerca' else '' }}">Acerca de</a></li>
             <li><a href="{{ url_for('descripcion') }}" class="{{ 'active' if active_page == 'descripcion' else '' }}">Descripción</a></li>
             <li><a href="{{ url_for('autor') }}" class="{{ 'active' if active_page == 'autor' else '' }}">Autor</a></li>
             <li><a href="{{ url_for('addpoint_page') }}" class="{{ 'active' if active_page == 'addpoint_page' else '' }}">Añadir Punto</a></li>
             <li><a href="{{ url_for('visualizacion_page') }}" class="{{ 'active' if active_page == 'visualizacion' else '' }}">Mapa de Incidencias</a></li>
-        </ul>
-    </nav>
+    </ul>
     
     <main>
-        <div class="titulo-burbuja animacion-entrada">
-            <h1>Acerca de Este Proyecto</h1>
-        </div>
-
-        <div class="card layout-container animacion-entrada">
-            <div class="column" id="texto-acerca">
-                <h3>Motivación y Contexto</h3>
-                <p>Este proyecto surge de la observación directa y la experiencia de los desafíos diarios que enfrentan los residentes de Soacha con el transporte público, especialmente durante las horas de mayor demanda.</p>
-                <h3>Objetivos</h3>
-                <ul>
-                    <li>Analizar los patrones de distribución y circulación de las busetas.</li>
-                    <li>Identificar los cuellos de botella y puntos de mayor congestión y demora.</li>
-                    <li>Evaluar el impacto en los tiempos de espera y viaje de los usuarios.</li>
-                    <li>Proveer una plataforma de datos abierta para la toma de decisiones informadas.</li>
-                </ul>
+        <div class="card animacion-entrada" style="text-align: center; max-width: 700px; margin: 2em auto;">
+            <div class="card-icon" style="margin: 0 auto 1em;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
             </div>
-            <div class="column" id="mapa-acerca-container">
-                <h3>Visualización Geográfica del Área de Estudio</h3>
-                <div id="mapa-acerca" class="map-container"></div>
-            </div>
+            <h1>¡Reporte Enviado!</h1>
+            <p style="font-size: 1.1em; color: var(--color-texto-secundario);">Gracias por tu contribución para mejorar la movilidad en Soacha. Tu reporte ha sido registrado exitosamente.</p>
+            <a href="{{ url_for('index') }}" class="boton-card" style="max-width: 200px; margin: 1.5em auto 0;">Volver al Inicio</a>
         </div>
     </main>
-
+    
     <footer>
         <div class="footer-links">
             <a href="{{ url_for('index') }}">Inicio</a>
@@ -72,7 +49,6 @@
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
     <script src="{{ url_for('static', filename='js/programa.js') }}" defer></script>
 </body>
 </html>
