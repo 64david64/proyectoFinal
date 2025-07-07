@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UrbFlow - Inicio</title>
-    <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="../static/css/estilos.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
 </head>
 <body>
 
     <header>
         <div class="header-container">
-            <a href="index.html" class="logo-link">
-            <img src="../static/svg/logo.svg" alt="Logo de UrbFlow" class="header-logo logo-dark">
-            <img src="../static/svg/logo-negativo.svg" alt="Logo de UrbFlow en negativo" class="header-logo logo-light">
+            <a href="{{ url_for('index') }}" class="logo-link">
+                <img src="{{ url_for('static', filename='svg/logo.svg') }}" alt="Logo de UrbFlow" class="header-logo logo-dark">
+                <img src="{{ url_for('static', filename='svg/logo-negativo.svg') }}" alt="Logo de UrbFlow en negativo" class="header-logo logo-light">
             </a>
-            <h1>UrbFlow: Análisis de Transporte en Soacha</h1>
+            <span class="site-slogan">UrbFlow: Análisis de Transporte en Soacha</span>
             <button id="theme-toggle" aria-label="Alternar modo claro/oscuro"></button>
         </div>
     </header>
@@ -29,78 +29,73 @@
             <span class="hamburger"></span>
         </button>
         <ul class="nav-links">
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="acerca.html">Acerca de</a></li>
-            <li><a href="descripcion.html">Descripción</a></li>
-            <li><a href="autor.html">Autor</a></li>
-            <li><a href="add-point.html">Añadir Punto</a></li>
+            <li><a href="{{ url_for('index') }}" class="{{ 'active' if active_page == 'index' else '' }}">Inicio</a></li>
+            <li><a href="{{ url_for('acerca') }}" class="{{ 'active' if active_page == 'acerca' else '' }}">Acerca de</a></li>
+            <li><a href="{{ url_for('descripcion') }}" class="{{ 'active' if active_page == 'descripcion' else '' }}">Descripción</a></li>
+            <li><a href="{{ url_for('autor') }}" class="{{ 'active' if active_page == 'autor' else '' }}">Autor</a></li>
+            <li><a href="{{ url_for('addpoint_page') }}" class="{{ 'active' if active_page == 'addpoint_page' else '' }}">Añadir Punto</a></li>
+            <li><a href="{{ url_for('visualizacion_page') }}" class="{{ 'active' if active_page == 'visualizacion' else '' }}">Mapa de Incidencias</a></li>
         </ul>
     </nav>
 
     <main>
         <div class="titulo-burbuja animacion-entrada">
-            <h2>Mala distribución y circulación de busetas durante la hora pico nocturna en el municipio de Soacha, Cundinamarca.</h2>
+            <h1>Mala distribución y circulación de busetas durante la hora pico nocturna en el municipio de Soacha, Cundinamarca.</h1>
         </div>
-
-        <section class="contenido-principal animacion-entrada">
+        <section class="card animacion-entrada">
             <h3>Bienvenido a UrbFlow</h3>
             <p><strong>UrbFlow</strong> es una iniciativa dedicada a visualizar y analizar los desafíos de movilidad urbana que enfrentan miles de ciudadanos diariamente.</p>
             <p>A través de este portal, buscamos no solo exponer datos, sino también crear conciencia sobre la calidad, eficiencia y seguridad del transporte.</p>
         </section>
-
         <section class="swiper-section animacion-entrada">
             <h2 class="galeria-titulo">Explora el Área de Estudio</h2>
             <div class="swiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="../static/img/gallery/imagen1.jpg" alt="Vista de calle en Ciudad Verde" loading="lazy">
-                        <div class="swiper-slide-caption"><p>Vías principales del barrio Ciudad Verde.</p></div>
-                    </div>
-                    <div class="swiper-slide"><img src="../static/img/gallery/imagen2.jpg" alt="Transporte público en Soacha" loading="lazy">
-                        <div class="swiper-slide-caption"><p>Busetas, el principal medio de transporte público.</p></div>
-                    </div>
-                    <div class="swiper-slide"><img src="../static/img/gallery/imagen3.jpg" alt="Panorámica de Soacha" loading="lazy">
-                        <div class="swiper-slide-caption"><p>Vista panorámica de la densidad urbana.</p></div>
-                    </div>
-                    <div class="swiper-slide"><img src="../static/img/gallery/imagen4.jpg" alt="Detalle de paradero de bus" loading="lazy">
-                        <div class="swiper-slide-caption"><p>Paradero de autobús, punto de encuentro diario.</p></div>
-                    </div>
+                    <div class="swiper-slide"><img src="{{ url_for('static', filename='img/gallery/imagen1.jpg') }}" alt="Vista de calle en Ciudad Verde" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="{{ url_for('static', filename='img/gallery/imagen2.jpg') }}" alt="Transporte público en Soacha" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="{{ url_for('static', filename='img/gallery/imagen3.jpg') }}" alt="Panorámica de Soacha" loading="lazy"></div>
+                    <div class="swiper-slide"><img src="{{ url_for('static', filename='img/gallery/imagen4.jpg') }}" alt="Detalle de paradero de bus" loading="lazy"></div>
                 </div>
                 <div class="swiper-pagination"></div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
             </div>
         </section>
-
         <section class="colaborar-section animacion-entrada">
             <h2 class="colaborar-titulo">Comienza a Colaborar</h2>
             <div class="colaborar-container">
-                 <div class="colaborar-card">
+                 <div class="card colaborar-card">
                     <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                     <h3>Reporta un Incidente</h3>
                     <p>Añade un punto en el mapa y ayúdanos a registrar congestiones, demoras o problemas.</p>
-                    <a href="add-point.html" class="boton-card">Ir al Formulario</a>
+                    <a href="{{ url_for('addpoint_page') }}" class="boton-card">Ir al Formulario</a>
                 </div>
-                <div class="colaborar-card">
+                <div class="card colaborar-card">
                     <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg></div>
                     <h3>Conoce el Proyecto</h3>
                     <p>Descubre los objetivos, la metodología y la tecnología que impulsan esta iniciativa.</p>
-                    <a href="descripcion.html" class="boton-card">Leer Más</a>
+                    <a href="{{ url_for('descripcion') }}" class="boton-card">Leer Más</a>
                 </div>
-                <div class="colaborar-card">
+                <div class="card colaborar-card">
                     <div class="card-icon"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></div>
                     <h3>Sobre el Autor</h3>
                     <p>Conoce más sobre el desarrollador detrás de este proyecto y su motivación.</p>
-                    <a href="autor.html" class="boton-card">Ver Perfil</a>
+                    <a href="{{ url_for('autor') }}" class="boton-card">Ver Perfil</a>
                 </div>
             </div>
         </section>
     </main>
-
+    
     <footer>
+        <div class="footer-links">
+            <a href="{{ url_for('index') }}">Inicio</a>
+            <a href="{{ url_for('acerca') }}">Acerca de</a>
+            <a href="{{ url_for('addpoint_page') }}">Reportar</a>
+        </div>
         <p>&copy; 2025 - Juan David Acosta Rodríguez</p>
     </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="../static/js/programa.js" defer></script>
+    <script src="{{ url_for('static', filename='js/programa.js') }}" defer></script>
 </body>
 </html>
